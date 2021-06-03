@@ -1,5 +1,5 @@
 <?php	include("include/navbar.php"); ?>
-<?php	include("include2/conection2.php"); ?>
+<?php	include("include/conection2.php"); ?>
 <?php	include("include/time.php"); ?>
 <?php	
 
