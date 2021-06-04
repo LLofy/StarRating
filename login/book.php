@@ -20,14 +20,12 @@
 			$total_pages = $mysqli->query('SELECT COUNT(*) FROM  reviews')->fetch_row()[0];
 
 			$pages = $mysqli->query('SELECT COUNT(*) FROM  reviews')->fetch_row()[0];
-		
-			echo $pages;
 
 			// Check if the page number is specified and check if it's a number, if not return the default page number which is 1.
 			$page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 			
 			// Number of results to show on each page.
-			$num_results_on_page = 1;        
+			$num_results_on_page = $pages;        
 		?>
 		<?php
 				if ($stmt = $mysqli->prepare('SELECT * FROM reviews ORDER BY id LIMIT ?,?')) {
@@ -38,25 +36,34 @@
 					// Get the results...
 					$result = $stmt->get_result();
 					$stmt->close();
+					$a = 1;
 				}
 		?>
-		<table>  
-			<tr>           
-				<th>ID</th>                     
-				<th>NOME</th>                          
-				<th></th>  
-			</tr>
-			<?php while ($row = $result->fetch_assoc()): ?>
-			<tr>
-				<td><?php echo $row['id'];?>
-				<td><?php echo $row['name'];?>
-			</tr>
-			<?php endwhile; ?>
-		</table>
+		<div class="table">
+			<div class="list">
+				<?php while ($row = $result->fetch_assoc()): 
+					if (($row['id']-1)%10==0) {
+						echo "<div class='page" .$a++  ."'>";
+					}
+					echo '<div class="item">' .$row['id'] ."</div>";
+					if (($row['id'])%10==0) {
+						echo "</div>";	
+					} endwhile; 
+				?>
+			</div>
+		</div>
 
 		<?php if (ceil($total_pages / $num_results_on_page) > 0): ?>
-		<?php	include("pagination.php"); ?>
 		<?php endif; ?>
-		     
+		<div class="controls">
+			<div class="first">&#171;</div>
+			<div class="prev"><</div>
+			<div class="numbers">
+				<div>1</div>
+			</div>
+			<div class="next">></div>
+			<div class="last">&#187;</div>
+		</div>		     
 	</body>
 </html>  
+<script type="text/javascript" src="function.js"></script>

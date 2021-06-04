@@ -33,7 +33,14 @@ $stmt->close();
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
 	<body class="loggedin">
-    <?php	include("include/navbar.php"); ?>
+		<nav class="navtop">
+			<div>
+				<h1><a  href=home.php>Website Title</a></h1>
+				<a href="books.php"><i class="far fa-star"></i>Livros</h1>
+				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
 		<div class="content">
 			<h2>Profile Page</h2>
 			<div>
