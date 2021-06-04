@@ -7,9 +7,38 @@
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
-	<body class="loggedin">	 
-		<?php	include("include/navbar.php"); ?>
-		<?php	include("include/time.php"); ?>
+	<body class="loggedin">
+
+		<nav class="navtop">
+			<div>
+				<h1><a  href=home.php>Website Title</a></h1>
+				<a href="books.php"><i class="far fa-star"></i>Livros</h1>
+				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+
+		<?php
+			// Below function will convert datetime to time elapsed string.
+    		function time_elapsed_string($datetime, $full = false) {
+				$now = new DateTime;
+				$ago = new DateTime($datetime);
+				$diff = $now->diff($ago);
+				$diff->w = floor($diff->d / 7);
+				$diff->d -= $diff->w * 7;
+				$string = array('y' => 'year', 'm' => 'month', 'w' => 'week', 'd' => 'day', 'h' => 'hour', 'i' => 'minute', 's' => 'second');
+				foreach ($string as $k => &$v) {
+					if ($diff->$k) {
+						$v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+					} else {
+						unset($string[$k]);
+					}
+				}
+				if (!$full) $string = array_slice($string, 0, 1);
+				return $string ? implode(', ', $string) . ' ago' : 'just now';
+			}
+		?>
+		
 		<div class="content">
 			<h2> Reviews </h2>
 		</div>
