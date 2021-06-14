@@ -2,7 +2,7 @@
 session_start();
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
+$DATABASE_USER = 'root'; 
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'phplogin';
 // Try and connect using the info above.
@@ -47,8 +47,5 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
         echo 'Incorrect username and/or password!';
     }
 	$stmt->close();
-    
 }
-
-
 ?>

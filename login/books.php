@@ -53,8 +53,8 @@
         </tr>
         <?php while ($row = $result->fetch_assoc()): ?>
         <tr>
-            <td><?php echo "<a href='".  $row['link']. "'>" . $row['name'] . "</a>";?>
-            <td><?php echo $row['desc'];?>
+            <td><?php echo "<a href='".  $row['link']. "?page=" .$row['id'] ."'>" . $row['name'] . "</a>";?>
+            <td><?php echo $row['descr'];?>
             <td><?php echo "5";?>
             <td><?php echo "<a class='button' href='".  $row['link']. "'> AVALIE "  . "</a>";?>
         </tr>

@@ -5,14 +5,13 @@ const html = {
         return document.querySelector(element)
     }
 }
-console.log(1)
+
 const paginas = {
     pagina : [html.get('.list > .page' + 1).innerHTML]
 }
 for (i=2;;i++){
     try {
         paginas.pagina.push(html.get('.list > .page' + i).innerHTML)
-        console.log(i)
     } catch (e) {
         break; 
     }
@@ -87,7 +86,7 @@ function executeFunctionByName(functionName, context /*, args */) {
 const list = {
     update(){       
         html.get('.list').innerHTML = ''
-        html.get('.numbers >div ').innerHTML = state.page
+        html.get('.numbers ').innerHTML = state.page
         paginaAtual = paginas.pagina[state.page-1]
         html.get('.list').innerHTML += ("<div class='page"+state.page+"'>") + (paginaAtual) + "</div>"
     }
@@ -103,3 +102,17 @@ function init(){
 }
 // função para chamar a atualização da página.
 init()
+
+
+function show() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  document.getElementById('Degelijkheid-1-5').addEventListener('click', () => {
+    checked = true;
+})
