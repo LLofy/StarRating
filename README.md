@@ -11,5 +11,7 @@ o sistema de livros foi feito de forma que existam alguns livros por pagina conf
 
 foto de avaliação do livro
 
+para entrar com login usar nome = test e senha = test
+
 também sera possivel ver em cima uma barra de icones para cada criptomoeda existente, esse sistema visa facilitar a compra venda e troca de criptomoedas, com avaliação atraves do publico, sabemos que o sistema esta vuneravel a ataque de bots e pretendemos ir concertando isso com o tempo.
 
