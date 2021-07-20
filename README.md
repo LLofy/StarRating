@@ -3,7 +3,7 @@ Um site com registro e login para dar review em livros, que na verdade é o esqu
 
 a ideia aqui é criar um sistema de livros que vão ser substituido por pessoas, e substituir a notas e comentarios dos livros por notas e comentarios nas pessoas, algo bem parecido com a série black mirror 
 
-![Image of espelho](https://github.com/LLofy/StarRating/blob/main/pagina/login/img/div.jpg)
+![Image of espelho](https://github.com/LLofy/StarRating/tree/main/login/img)
 
 imagem de black mirror aqui
 
