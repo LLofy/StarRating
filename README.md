@@ -9,7 +9,7 @@ o sistema de livros foi feito de forma que existam alguns livros por pagina conf
 
 ![Image of livroPagina](https://github.com/LLofy/StarRating/blob/main/login/img/livroPagina.png)
 
-foto de avaliação do livro
+![Image of avaliacao](https://github.com/LLofy/StarRating/blob/main/login/img/avaliacao.png)
 
 para entrar com login usar nome = test e senha = test
 
