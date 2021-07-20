@@ -5,7 +5,7 @@ a ideia aqui é criar um sistema de livros que vão ser substituido por pessoas,
 
 ![Image of espelho](https://github.com/LLofy/StarRating/blob/main/login/img/nosedive.jpg)
 
-o sistema de livros foi feito de forma que existam alguns livros por pagina conforme na imagem abaixo, o nome dos livros vão ser subistuidos por nomes de pessoas, assim como as paginas de avaliações de livros será substituiads por pessoas.
+o sistema de livros foi feito de forma que existam alguns livros por pagina conforme na imagem abaixo, o nome dos livros vão ser subistuidos por nomes de pessoas, assim como as paginas de avaliações de livros será substituidas por pessoas.
 
 ![Image of livroPagina](https://github.com/LLofy/StarRating/blob/main/login/img/livroPagina.png)
 
